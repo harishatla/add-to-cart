@@ -1,0 +1,98 @@
+<ng-container *ngIf="cartList.length===0">
+    <div class="container">
+    <div class="card">
+         
+        <div class="card-body">
+            <div class="card-title">
+                <h5>MyCart</h5>
+            </div>
+            <div class="card-center " style="text-align: center;">
+                <img src="https://rukminim1.flixcart.com/www/800/800/promos/…019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90">
+                <p>your carrt is empty!</p>
+                <button class="btn btn-primary" routerLink="/allProducts">Please Add Items</button>
+            </div>
+            
+        </div>
+         
+    </div>
+</div>
+<div>
+    
+</div>
+</ng-container>
+
+
+ 
+<ng-container *ngIf="cartList.length != 0">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th appHighLight>Sr.no</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of cartList;index as i">       
+                            <td>{{i+1}}</td>
+                            <td style="max-width: 100ch;">{{item.title}}</td>
+                            <td><img style="width: 100px;width:100px" src="{{item.image}}"></td>
+                            <td style="width:25%"><p>{{item.description}}</p></td>
+                            <td style="width: 12%;">{{item.price}}</td>
+                            <!-- <td> <span>{{item.quantity}} </span></td> -->
+                            <td style="width: 12%;"><span><input style="width: 40px;" type="number" name="quantity" [(ngModel)]="item.quantity"><button class="btn btn-success btn-sm m-1" (click)="update(item)">update</button></span></td>
+                            <td style="width: 12%;">{{item.total * item.quantity | number}}</td>
+                            <td><button class="btn btn-danger" (click)="deleteItemFromCart(item)">Delete</button></td>
+                        </tr>
+                        <tr>
+                             <td colspan="4"></td>
+                            <td><button class="btn esc btn-danger" (click)="emptyCart()">Empty cart</button></td>
+                            <td><button class="btn esc btn-primary">Shop more</button></td>
+                            <td><strong>Grand Total:<br>{{grandTotal | number}}</strong></td>
+                            <td><button class="btn esc btn-success">Checkout</button></td>
+                            
+                        </tr>
+                    </tbody>
+                     
+                </table>
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+ 
+
+
+<!-- <div class="dropdown" style="margin: 30px;">
+    <button class="btn" (click)="showDiv()"><i class="fa-solid fa-angle-down"></i></button>
+    <ng-container *ngIf="box">
+        <div class="box">
+            <ul>
+                <li>
+                    <a href="">Account settings</a>
+                </li>
+                <li>
+                    <a href="">Notifications</a>
+                </li>
+                <li>
+                    <a href="">Support</a>
+                </li>
+                <li>
+                    <a href="">Log out</a>
+                </li>
+            </ul>
+            
+        </div>
+    </ng-container>
+</div>
+
+  -->

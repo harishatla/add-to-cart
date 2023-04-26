@@ -1,0 +1,33 @@
+.search-box{
+   width:100%;
+   margin-left: 10px;
+   position: relative;
+   margin-top:10px;
+}
+*{
+    margin:0px;
+    padding: 0px;
+}
+ 
+.search-box{
+    margin-top: 15px;
+    width: 500px;
+    padding: 5px;
+    position: relative;
+    border-radius: 20px;
+}
+.fa-magnifying-glass{
+    position:absolute;
+    left: 71%;
+    top: 33%;
+     
+}
+
+ .navbar{
+    display: flex;
+    width: 100%;
+    margin-top: -1px;
+    position: fixed;
+    z-index: 1;
+    height: 73px;
+} 

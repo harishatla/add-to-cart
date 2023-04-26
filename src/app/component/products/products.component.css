@@ -1,0 +1,80 @@
+ 
+.card-top{
+    position: relative;
+    display: flex;
+    align-items: center;
+  
+    border: 1px solid gray;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: rgb(232, 229, 226);
+}
+    
+.card-item img{
+    width: 60px;
+     
+}
+.card-item {
+    margin-left: 10px;
+    text-align: center;
+}
+.card-item a:hover{
+    color: rgb(152, 139, 139);
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products #qty{
+    width:60px;
+    border: 1px solid black;
+    margin-bottom: 2px;
+    margin-left: 100px;
+}
+.products{
+    
+    width:280px;
+    height: 380px;
+    margin: 5px;
+}
+.card-body img{
+    width:200px;
+    height:200px;
+}
+.card{
+    width: 20%;
+}
+ 
+.products img{
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     width:200px;
+     height: 200px;
+     background-color: red;
+}
+ .products:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+ }
+ .products .title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+ }
+ .products .description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+ }
+ .fa-heart{
+    cursor: pointer;
+ }
+ .price-row{
+    display: flex;
+
+ }
